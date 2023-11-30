@@ -1,0 +1,180 @@
+.tariff-plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+
+  padding: 60px 0 58px;
+
+  border: 7px solid $color-default-white;
+  background-color: $color-default-white;
+
+  @include vp-1365 {
+    padding-top: 60px;
+  }
+
+  @include vp-767 {
+    padding: 45px 0 43px;
+  }
+
+  @include hover {
+    border-image: linear-gradient(to bottom right, #d10a42, #00359f);
+    border-image-slice: 1;
+  }
+
+  &:focus-within {
+    border-image: linear-gradient(to bottom right, #d10a42, #00359f);
+    border-image-slice: 1;
+    outline: none;
+  }
+}
+
+.tariff-plan.is-active {
+  border-image: linear-gradient(to bottom right, #d10a42, #00359f);
+  border-image-slice: 1;
+}
+
+.tariff-plan__title {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 26px;
+  margin: 0 0 7px;
+
+  @include vp-1365 {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+
+.tariff-plan__option {
+  margin: 0 0 68px;
+
+  color: $color-text-default;
+
+  @include vp-1365 {
+    margin-bottom: 73px;
+
+    color: #495a7d;
+
+    &--dark {
+      color: $color-text-default;
+    }
+  }
+
+  @include vp-767 {
+    margin-bottom: 62px;
+
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.tariff-plan__price-content {
+  position: relative;
+
+  margin: auto 0 35px 1px;
+
+  @include vp-1365 {
+    margin-bottom: 24px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 23px;
+  }
+}
+
+.tariff-plan__price {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+
+  column-gap: 14px;
+  margin: 0;
+
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 90px;
+  color: #103aae;
+
+  @include vp-767 {
+    column-gap: 9px;
+
+    font-size: 48px;
+    line-height: 72px;
+  }
+}
+
+.tariff-plan__currency {
+  position: relative;
+
+  font-family: $ff-rouble;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 60px;
+  color: $color-text-default;
+
+  @include vp-767 {
+    font-size: 47px;
+    line-height: 47px;
+  }
+}
+
+.tariff-plan__price-shadow {
+  position: absolute;
+  top: -55px;
+  left: -17px;
+
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 150px;
+  color: rgb(232, 232, 232, 0.48);
+
+  @include vp-767 {
+    top: -44px;
+    left: -15px;
+
+    font-size: 80px;
+    line-height: 120px;
+  }
+}
+
+.tariff-plan__buy {
+  width: 59.4%;
+
+  @include vp-1365 {
+    width: 48.4%;
+  }
+
+  @include vp-767 {
+    width: 74.5%;
+  }
+}
+
+.is-active .tariff-plan__buy {
+  background-image: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
+  border-image: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
+  border-image-slice: 1;
+
+  color: $color-default-white;
+}
+
+.tariff-plan:hover .tariff-plan__buy {
+  background-image: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
+  border-image: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
+  border-image-slice: 1;
+
+  color: $color-default-white;
+
+  &:active:not(.focus-visible) {
+    color: rgba(255, 255, 255, 0.7);
+  }
+}

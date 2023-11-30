@@ -1,0 +1,156 @@
+.hero {
+  background-image: $red-to-right;
+}
+
+.hero__wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 5.1vw;
+
+  padding-bottom: 120px;
+
+  color: $color-default-white;
+
+  @include vp-1365 {
+    column-gap: 4vw;
+
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    column-gap: 0;
+
+    padding-top: 37px;
+    padding-bottom: 70px;
+  }
+}
+
+.hero__text-content {
+  display: grid;
+  flex-basis: 28.18vw;
+  column-gap: 1.6vw;
+
+  @include vp-1365 {
+    flex-basis: 42.1vw;
+    column-gap: 3.3vw;
+  }
+
+  @include vp-767 {
+    flex-basis: 100%;
+    justify-content: center;
+    column-gap: 4.6vw;
+  }
+}
+
+.hero__title {
+  grid-area: 2/2/3/3;
+  margin: 0;
+  margin-bottom: 50px;
+
+  font-family: $ff-alumni;
+  font-weight: 800;
+  font-size: 92px;
+  line-height: 110px;
+  letter-spacing: 4.6px;
+  text-transform: uppercase;
+  text-align: right;
+
+  @include vp-1365 {
+    font-size: 72px;
+    line-height: 85px;
+    letter-spacing: 0;
+  }
+
+  @include vp-767 {
+    margin-bottom: 59px;
+
+    font-size: 62px;
+    line-height: 70px;
+    letter-spacing: 1.86px;
+  }
+}
+
+.hero__location {
+  grid-area: 1/2/2/3;
+
+  margin: 0;
+  margin-bottom: 10px;
+
+  font-family: $ff-alumni;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 54px;
+  letter-spacing: 1.62px;
+  text-transform: uppercase;
+  text-align: right;
+  color: $color-default-white;
+
+  @include vp-1365 {
+    font-size: 42px;
+    line-height: 42px;
+    letter-spacing: 1.26px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 14px;
+
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 0.96px;
+  }
+}
+
+.hero__classes-list {
+  grid-area: 1/1/4/2;
+
+  padding: 0;
+  margin: auto 0;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  list-style: none;
+  text-align: right;
+
+  @include vp-767 {
+    transform: translateY(3px);
+
+    line-height: 20px;
+  }
+}
+
+.hero__membership {
+  grid-area: 3/2/4/3;
+
+  width: fit-content;
+  margin-left: auto;
+
+  @include vp-1365 {
+    width: 100%;
+  }
+
+  @include vp-767 {
+    grid-area: 3/1/4/3;
+  }
+}
+
+.hero__present-image {
+  width: 500px;
+  height: 524px;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+
+    background-color: #041d54;
+  }
+
+  @include vp-1365 {
+    width: 324px;
+    height: 390px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}

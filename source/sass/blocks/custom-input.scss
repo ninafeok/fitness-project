@@ -1,0 +1,94 @@
+.custom-input,
+.custom-textarea {
+  position: relative;
+
+  display: flex;
+
+  label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    @include vp-767 {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    input,
+    textarea {
+      flex-grow: 1;
+      width: 100%;
+      height: 36px;
+
+      padding: 8px 10px 4px 0;
+
+      border: 2px solid transparent;
+      border-bottom-color: #74819c;
+      outline: none;
+
+      background-color: transparent;
+
+      transition: border 0.5s ease;
+
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      color: $color-default-white;
+
+      &::placeholder {
+        color: $color-default-white;
+      }
+
+      @include vp-1365 {
+        padding-bottom: 5px;
+
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 24px;
+      }
+
+      @include vp-767 {
+        padding-bottom: 2px;
+
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      &:hover {
+        border-bottom-color: $color-default-white;
+      }
+
+      &:focus,
+      &:active {
+        padding-left: 4px;
+
+        border: 2px solid $color-default-white;
+
+        &::placeholder {
+          color: transparent;
+        }
+      }
+    }
+  }
+
+  &.is-invalid {
+    input,
+    textarea {
+      border-bottom-color: #ff121f;
+    }
+  }
+
+
+  .input-message {
+    position: absolute;
+    left: 0;
+    bottom: -22px;
+
+    &.is-invalid {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      color: #ff121f;
+    }
+  }
+}

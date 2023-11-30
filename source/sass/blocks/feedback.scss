@@ -1,0 +1,27 @@
+.feedback {
+  display: flex;
+
+  @include vp-1365 {
+    flex-wrap: wrap;
+  }
+}
+
+.feedback__callme {
+  flex-basis: 50%;
+
+  @include vp-1365 {
+    flex-basis: 100%;
+  }
+}
+
+.feedback__contacts {
+  flex-basis: 50%;
+
+  border-top: 1px solid #74819c;
+
+  @include vp-1365 {
+    flex-basis: 100%;
+
+    border: none;
+  }
+}

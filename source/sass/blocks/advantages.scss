@@ -1,0 +1,307 @@
+.advantages {
+  background-color: #f8f9fc;
+}
+
+.advantages__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 119px;
+  padding-bottom: 124px;
+
+  h2 {
+    margin: 0 0 51px;
+
+    font-family: $ff-alumni;
+    font-size: 54px;
+    font-weight: 600;
+    line-height: 54px;
+    letter-spacing: 1.62px;
+  }
+
+  @include vp-1365 {
+    padding-top: 101px;
+    padding-bottom: 100px;
+
+    h2 {
+      margin-bottom: 49px;
+
+      font-size: 42px;
+      line-height: 42px;
+      letter-spacing: 1.26px;
+    }
+  }
+
+  @include vp-767 {
+    padding-top: 71px;
+    padding-bottom: 50px;
+
+    h2 {
+      margin-bottom: 54px;
+      font-size: 32px;
+      line-height: 32px;
+      letter-spacing: 0.96px;
+    }
+  }
+}
+
+.advantages__list {
+  display: grid;
+  grid-template-columns: 24.9vw 17.6vw 24.9vw;
+
+  padding: 0;
+  margin: 0;
+  column-gap: 4.4vw;
+  row-gap: 121px;
+
+  list-style: none;
+
+  @include vp-1365 {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 6.51vw;
+    row-gap: 40px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 35px;
+
+    width: 100vw;
+  }
+}
+
+.advantages__item {
+  display: flex;
+  column-gap: 2.2vw;
+
+  min-height: 108px;
+
+  @include vp-1365 {
+    column-gap: 1.98vw;
+
+    min-height: 92px;
+    max-height: unset;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    flex-basis: 100%;
+    row-gap: 12px;
+
+    min-height: 172px;
+    padding: 0 14.7vw;
+
+    text-align: center;
+  }
+}
+
+.advantages__text-content {
+  order: 1;
+
+  h3 {
+    margin: 0 0 8px;
+
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  br {
+    display: none;
+  }
+
+  @include vp-1365 {
+    h3 {
+      margin-bottom: 12px;
+
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  @include vp-767 {
+    h3 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    br {
+      display: block;
+    }
+  }
+}
+
+.advantages__value {
+  order: 0;
+
+  p {
+    margin: 0;
+
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 70px;
+    color: $color-text-default;
+
+    background-image: linear-gradient(128deg, #d10a42 0%, #0041ca 45.58%);
+    background-clip: text;
+  }
+
+  span {
+    display: block;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #2e35ac;
+  }
+
+  @include vp-767 {
+    p {
+      font-size: 64px;
+      line-height: 64px;
+    }
+
+    span {
+      line-height: 20px;
+    }
+  }
+}
+
+.advantages__item--accent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 35px;
+
+  grid-area: 1/2/3/3;
+  transform: translateY(4px);
+
+  max-height: none;
+  min-height: 340px;
+  padding: 5.1vw 2.5vw 0;
+
+  background-color: #1c3374;
+
+  text-align: center;
+  color: $color-default-white;
+
+  p {
+    order: 1;
+
+    margin: 0;
+
+    font-weight: 400;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 49.7%;
+
+    width: 24.9vw;
+    height: 2px;
+
+    background-color: rgba(209, 10, 66, 0.2);
+  }
+
+  &::before {
+    left: -29.3vw;
+  }
+
+  &::after {
+    right: -29.3vw;
+  }
+
+  @include vp-1365 {
+    grid-area: 2/1/3/3;
+    justify-self: center;
+    row-gap: 25px;
+
+    width: 52.1vw;
+    min-height: 262px;
+    padding: 4.5vw;
+
+    transform: none;
+
+    p {
+      width: 27.34vw;
+    }
+
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+
+  @include vp-767 {
+    row-gap: 20px;
+
+    min-height: 225px;
+    margin: 5px 0;
+    padding: 9.4vw 23.1vw 12.5vw;
+
+    p {
+      width: auto;
+
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 22px;
+    }
+  }
+}
+
+.advantages__item--accent .advantages__value {
+  p {
+    row-gap: 12px;
+
+    font-weight: 700;
+    color: $color-default-white;
+
+    background-image: none;
+  }
+
+  span {
+    margin-top: 12px;
+
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 26px;
+    color: $color-default-white;
+  }
+
+  @include vp-1365 {
+    span {
+      margin-top: 25px;
+
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+
+  @include vp-767 {
+    p {
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 64px;
+    }
+
+    span {
+      margin-top: 5px;
+
+      font-size: 22px;
+      line-height: 22px;
+    }
+  }
+}

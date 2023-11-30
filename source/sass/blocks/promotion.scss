@@ -1,0 +1,314 @@
+.promotion__wrapper {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  @include vp-1365 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 71px;
+    padding-bottom: 70px;
+  }
+}
+
+.promotion h2 {
+  margin: 0 0 70px;
+
+  font-family: $ff-alumni;
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 54px;
+  letter-spacing: 1.62px;
+  text-align: center;
+
+  @include vp-1365 {
+    margin-bottom: 40px;
+
+    font-size: 42px;
+    line-height: 42px;
+    letter-spacing: 1.26px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 41px;
+
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 0.96px;
+  }
+}
+
+.promotion__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @include vp-1365 {
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+}
+
+.promotion__item {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 211px;
+  padding: 1.7vw 2vw 2.4vw;
+
+  border: 7px solid $color-text-default;
+  border-image: linear-gradient(to bottom right, #d10a42, #00359f);
+  border-image-slice: 1;
+
+  text-align: left;
+  color: #1c3374;
+
+  h3 {
+    margin: 0 0 10px;
+
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 26px;
+  }
+
+  p {
+    flex-basis: 100%;
+    flex-grow: 1;
+
+    width: 99%;
+    margin: 0 0 15px;
+  }
+
+  a {
+    position: relative;
+    display: inline-block;
+
+    width: min-content;
+    padding: 10px;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+
+    user-select: none;
+
+    transform: translate(-10px, 10px);
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: 10px;
+      bottom: 6px;
+
+      width: calc(100% - 20px);
+      height: 1px;
+
+      background-color: #1c3374;
+    }
+
+    @include hover {
+      opacity: 0.8;
+    }
+
+    @include focus {
+      outline: 1px solid #1c3374;
+
+      &::after {
+        content: none;
+      }
+    }
+
+    &:active:not(.focus-visible) {
+      opacity: 1;
+    }
+  }
+
+  &--special {
+    display: flex;
+    flex-direction: row;
+
+    padding: 0;
+    grid-area: 1/1/3/2;
+
+    border: none;
+
+    a {
+      @include focus {
+        outline: 1px solid $color-default-white;
+      }
+    }
+  }
+
+  &--disabled a {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  @include vp-1365 {
+    grid-column: unset;
+
+    padding: 3vw 6vw 3.7vw 3.6vw;
+
+    &--special {
+      grid-area: 1/1/2/3;
+
+      padding: 0;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    a {
+      transform: translate(-10px, 6px);
+    }
+  }
+
+  @include vp-767 {
+    align-items: center;
+
+    padding: 12vw 15vw 8vw;
+
+    text-align: center;
+
+    &--special {
+      flex-wrap: wrap;
+
+      margin-bottom: 10px;
+      padding: 0;
+    }
+
+    h3 {
+      font-size: 22px;
+      line-height: 22px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    a {
+      transform: translate(0, -2px);
+    }
+  }
+}
+
+.promotion__text {
+  display: flex;
+  flex-direction: column;
+
+  flex-basis: 50%;
+  padding: 2.9vw 3.3vw 3.59vw;
+
+  background-color: #ed0233;
+  color: $color-default-white;
+
+  h3 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+    margin: 0 0 25px;
+  }
+
+  span {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 70px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  a {
+    color: $color-default-white;
+
+    &::after {
+      background-color: $color-default-white;
+    }
+  }
+
+  @include vp-1365 {
+    flex-basis: 41.2%;
+    padding: 5.85vw;
+
+    h3 {
+      row-gap: 5px;
+
+      margin-bottom: 20px;
+    }
+
+    a {
+      &::after {
+        bottom: 6px;
+      }
+    }
+  }
+
+  @include vp-767 {
+    flex-basis: 100%;
+    align-items: center;
+
+    padding: 14.3vw 15.6vw 16.1vw;
+
+    h3 {
+      row-gap: 8px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    span {
+      font-size: 64px;
+      line-height: 64px;
+    }
+
+    a {
+      transform: translate(0, 12px);
+    }
+  }
+}
+
+.promotion__image {
+  flex-basis: 50%;
+
+  img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    background-color: #4573df;
+  }
+
+  @include vp-1365 {
+    flex-basis: 58.8%;
+  }
+
+  @include vp-767 {
+    flex-basis: 100%;
+    height: 103.1vw;
+  }
+}

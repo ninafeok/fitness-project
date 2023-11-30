@@ -1,0 +1,85 @@
+.btn {
+  display: inline-block;
+  padding: 26px 55px 24px;
+
+  color: $color-default-white;
+  background-color: transparent;
+  border: 2px solid $color-default-white;
+
+  font-family: $ff-roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  text-align: center;
+
+  transition: opacity $trans-default;
+  cursor: pointer;
+  user-select: none;
+
+  @include vp-1365 {
+    padding: 20px 32px;
+  }
+
+  @include hover-focus {
+    background-color: $color-default-white;
+    color: #103aae;
+
+    outline: none;
+  }
+
+  &:active:not(.focus-visible) {
+    background-color: $color-default-white;
+    color: $color-text-default;
+  }
+
+  &:disabled,
+  &--disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  &--accent {
+    padding: 25px 42px;
+
+    border: solid 2px $color-text-default;
+    color: $color-text-default;
+
+    @include vp-1365 {
+      padding: 21px 42px 19px;
+    }
+
+    @include hover-focus {
+      background-image: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
+      border-image: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
+      border-image-slice: 1;
+
+      outline: none;
+
+      color: $color-default-white;
+    }
+
+    &:active:not(.focus-visible) {
+      background-image: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
+      border-image: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
+      border-image-slice: 1;
+
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    &:disabled {
+      opacity: 0.3;
+
+      pointer-events: none;
+    }
+  }
+}
+
+.btn--disabled.btn--accent {
+  opacity: 0.3;
+
+  pointer-events: none;
+}

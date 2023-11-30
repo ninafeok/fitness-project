@@ -1,0 +1,282 @@
+.experts__title {
+  margin: 0 0 46px;
+
+  font-family: $ff-alumni;
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 54px;
+  letter-spacing: 1.62px;
+
+  @include vp-1365 {
+    margin-bottom: 40px;
+
+    font-size: 42px;
+    line-height: 42px;
+    letter-spacing: 1.26px;
+    text-align: center;
+  }
+
+  @include vp-767 {
+    margin-bottom: 41px;
+
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 0.96px;
+  }
+}
+
+.experts__slider {
+  position: relative;
+
+  @include vp-1365 {
+    padding: 0 55px;
+  }
+
+  @include vp-767 {
+    padding: 0 32px;
+  }
+}
+
+.experts__list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.experts__card {
+  position: relative;
+
+  @include vp-1365 {
+    height: 38.3vw;
+
+    &.is-active {
+      .experts__info {
+        opacity: 1;
+
+        background-color: rgba(16, 38, 84, 0.89);
+      }
+
+      .experts__name {
+        position: static;
+      }
+
+      .experts__specialty {
+        opacity: 1;
+      }
+
+      .experts__biography {
+        opacity: 1;
+      }
+    }
+  }
+
+  @include vp-767 {
+    height: 85.6vw;
+  }
+
+  @include hover-focus {
+    .experts__info {
+      opacity: 1;
+
+      background-color: rgba(16, 38, 84, 0.89);
+    }
+
+    .experts__name {
+      position: static;
+    }
+
+    .experts__specialty {
+      opacity: 1;
+    }
+
+    .experts__biography {
+      opacity: 1;
+    }
+  }
+}
+
+.experts__photo {
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    background-color: #b9c1d6;
+  }
+}
+
+.experts__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+  padding: 17.6% 15% 10%;
+
+  overflow-y: auto;
+}
+
+
+.experts__name {
+  position: absolute;
+  right: 0;
+  left: 0;
+
+  margin: 0 0 7px;
+  bottom: 19px;
+
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+  color: $color-default-white;
+
+  @include vp-1365 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    bottom: 18px;
+
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+
+.experts__specialty {
+  margin: 0 0 32px;
+
+  color: #b7becd;
+
+  opacity: 0;
+}
+
+.experts__biography {
+  padding-left: 25px;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: $color-default-white;
+
+  list-style-type: disc;
+  opacity: 0;
+}
+
+.experts__biography-item {
+  padding-left: 2px;
+  margin-bottom: 11px;
+
+  &::marker {
+    font-size: 16px;
+  }
+}
+
+.experts__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 56px;
+  height: 56px;
+  padding: 0;
+
+  border: solid 1px transparent;
+  border-radius: 50%;
+
+  background-color: transparent;
+  color: transparent;
+
+  cursor: pointer;
+
+  svg {
+    position: absolute;
+    top: 10px;
+    stroke: $color-text-default;
+  }
+
+  &--prev {
+    left: -74px;
+
+    svg {
+      left: 16px;
+    }
+  }
+
+  &--next {
+    right: -74px;
+
+    svg {
+      right: 16px;
+    }
+  }
+
+  @include vp-1365 {
+    &--prev {
+      left: -18px;
+    }
+
+    &--next {
+      right: -18px;
+    }
+  }
+
+  @include vp-767 {
+    width: 46px;
+    height: 46px;
+
+    svg {
+      top: 13px;
+      width: 12px;
+      height: 20px;
+    }
+
+    &--prev {
+      left: -14px;
+
+      svg {
+        left: 15px;
+      }
+    }
+
+    &--next {
+      right: -14px;
+
+      svg {
+        right: 15px;
+      }
+    }
+  }
+
+  @include hover-focus {
+    border: solid 1px $color-text-default;
+  }
+
+  &:active:not(:disabled) {
+    background-color: $color-text-default;
+
+    svg {
+      stroke: $color-default-white;
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+
+    svg {
+      stroke: $color-text-default;
+      opacity: 0.3;
+    }
+  }
+}
